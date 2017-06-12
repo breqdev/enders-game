@@ -77,7 +77,7 @@ class Player():
         for zone in collisionZones:
             if zone[0] < self.x < zone[0]+160 and \
                zone[1] < self.y < zone[1]+160:
-                self.v = 0
+                #self.v = 0
                 if self.y < zone[1]+30 and zone[0]+30 < self.x < zone[0]+130:
                     self.heading = -self.heading
                     self.y = zone[1]-10
@@ -137,7 +137,7 @@ class Flash():
         if self.x < 0 or self.x > WIDTH or self.y < 0 or self.y > HEIGHT:
             flashes.remove(self)
         for p in players:
-            if math.sqrt((self.x-p.x)**2 + (self.y-p.y)**2) < 10:
+            if math.sqrt((self.x-p.x)**2 + (self.y-p.y)**2) < 30:
                 p.freeze()
 
 
@@ -169,9 +169,9 @@ def runGame():
             buttons = wms[i].state["buttons"]
             #print(buttons)
             if buttons & cwiid.BTN_LEFT:
-                p.turn(-0.02)
+                p.turn(-0.05)
             if buttons & cwiid.BTN_RIGHT:
-                p.turn(0.02)
+                p.turn(0.05)
             if buttons & cwiid.BTN_UP:
                 p.v += 0.2
             if buttons & cwiid.BTN_B:
