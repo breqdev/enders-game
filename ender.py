@@ -4,7 +4,7 @@ import random, math, time
 import pygame, cwiid
 pygame.init()
 
-WIDTH, HEIGHT = 1000, 700
+WIDTH, HEIGHT = 1024, 600
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 screen.fill((0, 0, 0))
