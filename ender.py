@@ -137,7 +137,7 @@ class Flash():
         if self.x < 0 or self.x > WIDTH or self.y < 0 or self.y > HEIGHT:
             flashes.remove(self)
         for p in players:
-            if math.sqrt((self.x-p.x)**2 + (self.y-p.y)**2) < 30:
+            if math.sqrt((self.x-p.x)**2 + (self.y-p.y)**2) < 20:
                 p.freeze()
 
 
