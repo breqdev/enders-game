@@ -129,6 +129,8 @@ class Flash():
         self.y = y
         self.heading = h
         flashes.append(self)
+        self.x += 20*math.cos(self.heading)
+        self.y += 20*math.sin(self.heading)
 
     def generate(self):
         self.x += 20*math.cos(self.heading)
