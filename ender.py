@@ -6,7 +6,7 @@ pygame.init()
 
 WIDTH, HEIGHT = 1024, 600
 
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 screen.fill((0, 0, 0))
 
 class Field():
